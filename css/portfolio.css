@@ -24,26 +24,35 @@
 :root{
     --fontcolor:#691E00;
     --pointcolor:#f78254;
-
+     --hero-fs: clamp(68px, 10vw, 120px); /* 최소, 선형 비율, 최대 */
+  --font-size : calc(var(--hero-fs) * 0.8);
 }
+
 
 
 html,
 body{
-    width: 100%;
-    height: 100%;
     overflow-x: hidden;
     font-family: "Noto Sans KR", sans-serif;
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
+    scroll-behavior: smooth;
 }
+body{
+    display: flex;
+    flex-direction: column;
+}
+.tab_contents_container{
+    flex: 1;
+}
+
 a{
     transition: 0.5s;
 }
 
 .bg{ 
-    height: 600px;
+    min-height: 600px;
      background:
     /* 좌하 붉은 원 (위쪽 레이어) */
     radial-gradient(400px 400px at 10% 90%,
@@ -65,16 +74,19 @@ a{
 
     /* 베이스 */
     linear-gradient(135deg, #ffd9b3 0%, #fff3dd 55%, #ffffff 100%);
-
-  /* 먼저는 blend 끄고 확인 */
-  background-blend-mode: normal;
-  position: relative;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 120px;
 }
-header{
 
-}
+.bg, .tab_contents_container {
+     scroll-margin-top: calc(var(--header-offset, 80px) + 60px);
+    }
+
 header h1{
-    padding: 28px;
+    padding: 1.6rem 3.8rem;
     font-size: 1.2rem;
     font-family: "Krona One", sans-serif;
     font-weight: 500;
@@ -92,63 +104,110 @@ header h1{
     
 }
 
+/* 배경 마키 컨테이너 */
+.bg-marquee{
+  position: absolute;
+  left: 0; right: 0;
+  top: 18%;    /* 원하는 높이로 조절 */
+  overflow: hidden;
+  pointer-events: none; /* 클릭 방해 X */
+  z-index: 0;      /* 콘텐츠 뒤에 깔리게 */
+ 
+}
 
-.bg_text{
-    font-size: 6rem;
-    font-weight: 900;
-    white-space: nowrap;
-    /* letter-spacing: -0.1rem; */
-    color: rgba(255, 255, 255, 0.4);
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 900;
-    font-style: normal;
+/* 트랙: 두 덩어리를 왼쪽으로 슬라이드 */
+.bg-marquee__track{
+  display: flex;
+  width: max-content;  /* 내용 길이만큼 */
+  animation: marquee-scroll var(--marquee-speed, 200s) linear infinite;
 
 }
 
-.inner{
-    margin-left: 60px;
+/* 아이템: 같은 문구를 2개 둬서 -50%까지 이동하면 무한 반복처럼 보임 */
+.bg-marquee__item{
+  flex: 0 0 auto;
+  white-space: nowrap;
+  padding-right: 1rem;              /* 문구 사이 간격 */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: clamp(4rem, 10vw, 9rem);
+  letter-spacing: 0.01em;
+  color: rgba(255,255,255, .4);  /* 흰색 반투명 */
+}
+
+/* 애니메이션 */
+@keyframes marquee-scroll{
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); } /* 두 아이템 중 정확히 절반만큼 이동 */
+}
+
+/* 콘텐츠가 위에 오도록 */
+.bg .inner, .gnb_container { 
+    position: relative; 
+    z-index: 1; 
+}
+
+.visual_container .title-container{
+
+    margin-left: clamp(16px, 4vw, 60px);
     color: var(--fontcolor);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-}
-
-.inner p{
-    font-family:'NexonLv1Gothic', sans-serif;
-    font-weight: 400;
-    font-size: 1.6rem;
-
    
 
-    
 }
 
-.inner div{
 
-    font-family: "Hurricane", cursive;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 6rem;
+.visual_container .title-container{
+    font-family:'NexonLv1Gothic', sans-serif;
+    font-size: clamp(20px, 1.6vw, 24px);
+    position: relative;
+    z-index: 2;
+
+}
+
+.visual_container .title-container .name-container{
+    display:flex;
+    flex-direction: column;
+    line-height:1;
+}
+/* .visual_container .title-container strong{
+
+    font-family: "Hurricane", cursive; 
+    font-size: calc(var(--hero-fs) * 0.8);
     color: var(--pointcolor);
-    position: absolute;
-    padding-bottom: 35px;
+    outline: 1px solid red;
  
-
-
+} */
+.visual_container {
+  
 }
-.inner strong{
-    margin-top: 40px;
+
+.visual_container .coco {
     font-family: "Montserrat",sans-serif;
     font-weight: 800;
-    font-size: 6.2rem;
+    font-size: var(--hero-fs); 
+    top: -1.5rem;
     position: relative;
+    display:block;
+    /* margin-top:var(--font-size); */
+    margin-top: calc(var(--font-size) * 0.6);
+}
 
+.visual_container .coco span {
+    position: relative; 
+}
 
+.visual_container .coco::before {
 
     
+    content:'CoCo';
+    font-family: "Hurricane", cursive; 
+    font-weight: 300;
+    font-size:var(--font-size);
+    color: var(--pointcolor);
+    position:absolute; 
+    top:calc( var(--font-size) * -0.5);
 }
+
 
 
 .gnb_container{
@@ -159,15 +218,22 @@ header h1{
 }
 
 .menus{
-    margin-left: 60px;
+    margin: 0 clamp(16px, 4vw, 60px);
     display: flex;
-    gap: 8px;
+    gap: clamp(6px, 1.2vw, 12px);
     font-family: "Krona One", sans-serif;
     font-weight: 400;
     font-size: 1rem;
+    overflow-x: auto;                 
+    -webkit-overflow-scrolling: touch;
+    padding: 0 4px;
+    scrollbar-width: none;    
+    white-space: nowrap;
+    scroll-snap-type: x proximity;     
+
 }
 
-.menus li a{
+.menus a{
     width: 130px;
     border-radius: 16px 16px 0 0;
     background-color: rgba(255, 255, 255, 0.6);
@@ -176,8 +242,9 @@ header h1{
     justify-content: center;
     align-items: center;
 
+
 }
-.menus li a:hover{
+.menus a:hover{
     background-color: var(--pointcolor);
     color: var(--fontcolor);
 
@@ -187,7 +254,7 @@ header h1{
 /* 섹션 토글: hidden 속성이 있으면 감춤 */
 .tab_contents_container > section[hidden] { display: none; }
 
-/* 활성 탭 표시(원하시는 스타일로 수정) */
+/* 활성 탭 표시(원하는 스타일로 수정) */
 .menus a[aria-selected="true"]{
   font-weight: 600;
   filter: saturate(1.1);
@@ -201,13 +268,14 @@ header h1{
     display: flex;
     justify-content: center;
     gap: 60px;
+    flex-wrap: wrap;
     margin-top: 100px;
 
     
 }
 .about .profile{
-    width: 300px;
-    height: 300px;
+    width: clamp(180px, 35vw, 300px);
+    height: clamp(180px, 35vw, 300px);
     border-radius: 50%;
     background: url(../images/portfolio/profile2.jpg )no-repeat bottom center/cover;
     position: relative;
@@ -220,8 +288,8 @@ header h1{
     font-style: normal;
     font-size: 6rem;
     position: absolute;
-    right: 10px;
-    bottom: -20px;
+    right: 0.65rem;
+    bottom: -1.25rem;
     rotate: -15deg;
     color: var(--pointcolor);
 
@@ -237,7 +305,8 @@ header h1{
 }
 
 .about .text p{
-    width: 450px;
+    width: 100%;
+    max-width: 60ch;
     font-size: 1rem;
     line-height: 2;
 
@@ -279,42 +348,137 @@ header h1{
 
 }
 
-.portfolio{
+.portfolio,
+.work{
   max-width: 1200px;   /* 원하는 최대 폭 */
   margin: 100px auto;      /* 가운데 정렬 */
   padding: 0 24px;     /* 선택 */
-}
-
-.portfolio .card_container{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);  /* 2열 유지 */
-  gap: 100px;           /* 가로/세로 간격 */
-  align-items: start;   /* 세로 정렬은 보통 start */
 
 }
 
-.portfolio .card_container li{
 
-    height: 480px;
+.dimm{
+
+    position: fixed;
+    inset: 0; /* top/left/right/bottom 한번에 */
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 99;
+    display: none;
+
+}
+
+.modal-container {
+      background-color: #fff;
+      border-radius: 20px;
+      padding: 1.5rem;
+      width: 100%;
+      max-width: 900px;
+      min-height: 400px;
+      height: 70%;
+      z-index: 100;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: none;
+
+
+}
+.modal{
+    position: relative;
+    font-family: 'Noto Sans KR', 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #222;
+}
+
+.modal h3,
+.modal .project-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+
+}
+
+.modal .project-sub {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.modal .project-info strong {
+  font-weight: 600;
+  color: #000;
+}
+
+.modal .modal-close{
+    position: absolute;
+    top: 12px;
+    right: 12px;
+}
+
+.modal .modal-close img{ 
+    width: 18px; 
+    height: 18px; 
+    display:block; }
+
+.modal-container .modal {
+    height:100%;
+    overflow-y:auto;
+
+}
+
+
+.modal-body{
+    display: grid;
+    row-gap: 1rem;
+}
+.project-head { 
+    margin-bottom: 4px; 
+}
+.project-info  { 
+    margin-top: 8px; 
+}
+
+
+
+/* 열릴 때 */
+.dimm.is-open,
+.modal-container.is-open {
+  display: block;
+}
+
+ 
+.card_container{
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); /* 2열 유지 */ 
+    gap: 140px; /* 가로/세로 간격 */ 
+    align-items: start; /* 세로 정렬은 보통 start */
+}
+
+
+.card_container li{
+    height: 100%;
     position: relative;
     transition: 0.4s;
 
 }
 
 
-.portfolio .card_container li::before{
-    content: '';
-    background-color:#fdf7ea;
-    width: 500px;
-    height: 420px;
-    position: absolute;
-    left: 40px;
-    top: 80px;
+.card_container li::before{
+    content: ''; 
+    background-color:#fdf7ea; 
+    width: 100%; 
+    height: 85%; 
+    position: absolute; 
+    left: 8%;
+    top: 20%; 
     border-radius: 20px;
 
 }
 
-.portfolio .card_container li:hover{
+.card_container li:hover{
     scale: 1.1;
 }
 
@@ -328,8 +492,8 @@ header h1{
     display:block;
     border-radius:18px;
     overflow:hidden;
-    width: 500px;
-    height: 350px;
+    width: 100%;
+    aspect-ratio: 4 / 3;
 
 }
 
@@ -340,7 +504,7 @@ header h1{
 }
 
 .card_container .text h4{
-    margin: 12px 0;
+    margin: 0.6rem 0 0.5rem 0;
     font-weight: 700;
     font-size: 1.9rem;
     color: var(--fontcolor);
@@ -353,7 +517,7 @@ header h1{
 
 .card_container .tag{
     display: flex;
-    gap: 8px
+    gap: 0.5rem;
 }
 
 .card_container .tag p{
@@ -411,14 +575,48 @@ header h1{
 }
 
 footer{
-    width: 100%;
-    height: 80px;
-    background-color: #fff3dd;
     margin-top: 100px;
+    background: #fff6e9;
+    padding: 30px 60px;
+    font-size: 1rem;
 }
 
-footer p{
 
+
+@media all and (max-width: 480px){
+
+header h1{
     font-size: 1rem;
-    padding: 30px;
+    text-align: center;
+}
+.inner{
+    width: 80%;
+}
+.inner p { 
+    align-items: center;
+    font-size: 1.2rem;
+}
+.inner strong{
+    font-size: 5rem;
+}
+.inner .name{
+    font-size: 4.5rem;
+    padding-top: 0.8rem;
+}
+
+
+  .modal-container{ 
+
+    width:100vw; 
+    height:100dvh; 
+    max-height:none;  
+    border-radius: 0.5rem;
+
+}
+  .modal{ 
+    height:100%; 
+    border-radius:0; }
+  .card_container li::before{
+    display: none;
+  }
 }
