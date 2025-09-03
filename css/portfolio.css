@@ -114,6 +114,55 @@ header h1{
 
 }
 
+/* 배경 홀씨 */
+.floating-seeds{
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0; /* 텍스트 뒤 */
+}
+
+.floating-seeds .seed{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.95) 0%, rgba(255,255,255,.6) 60%, rgba(255,255,255,0) 70%);
+    filter: blur(0.2px);
+    opacity: .9;
+    transform: translate3d(0,0,0) scale(.9);
+    animation: seed-float linear infinite;
+}
+
+/* 씨앗의 작은 깃털 느낌(꼬리) */
+.floating-seeds .seed::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -18px;
+    width: 1px;
+    height: 18px;
+    background: linear-gradient(to top, rgba(255,255,255,.7), rgba(255,255,255,0));
+    transform: translateX(-50%);
+}
+
+/* 개별 위치/속도 다변화 */
+.floating-seeds .s1{ left: 8%;  bottom: -20px; animation-duration: 18s; animation-delay: -2s; }
+.floating-seeds .s2{ left: 22%; bottom: -30px; animation-duration: 22s; animation-delay: -6s; }
+.floating-seeds .s3{ left: 36%; bottom: -25px; animation-duration: 20s; animation-delay: -10s; }
+.floating-seeds .s4{ left: 50%; bottom: -35px; animation-duration: 24s; animation-delay: -4s; }
+.floating-seeds .s5{ left: 64%; bottom: -28px; animation-duration: 19s; animation-delay: -12s; }
+.floating-seeds .s6{ left: 78%; bottom: -22px; animation-duration: 26s; animation-delay: -8s; }
+.floating-seeds .s7{ left: 12%; bottom: -18px; animation-duration: 21s; animation-delay: -14s; }
+.floating-seeds .s8{ left: 88%; bottom: -24px; animation-duration: 23s; animation-delay: -1s; }
+
+@keyframes seed-float{
+    0%   { transform: translate3d(0, 0, 0) scale(.9) rotate(0deg);   opacity: .0; }
+    5%   { opacity: .9; }
+    50%  { transform: translate3d(40px, -50vh, 0) scale(1) rotate(25deg); }
+    100% { transform: translate3d(-20px, -100vh, 0) scale(1.05) rotate(-10deg); opacity: 0; }
+}
 /* 배경 마키 컨테이너 */
 .bg-marquee{
   position: absolute;
@@ -465,8 +514,8 @@ header h1{
   position: relative;
   isolation: isolate;         /* or: z-index: 0; (폴백) */
   --r: 18px;                   /* 둥근 모서리 */
-  --dx: clamp(8px, 1.8vw, 25px);  /* → 오프셋 */
-  --dy: clamp(8px, 1.8vw, 20px);  /* ↓ 오프셋 */
+  --dx: clamp(8px, 1.8vw, 30px);  /* → 오프셋 */
+  --dy: clamp(8px, 1.8vw, 30px);  /* ↓ 오프셋 */
   transition: 0.4s;
 
 }
@@ -592,7 +641,97 @@ footer{
     font-size: 1rem;
 }
 
+.form-container{
+  width: 50%;
+  height: 500px;
+  background:rgba(255,245,235,.65);
+  border:1px solid rgba(247,130,84,.25);
+  backdrop-filter: blur(8px) saturate(120%);
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
 
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 80%;
+}
+
+.input-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  text-align: left;
+
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0 1rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.input-group input {
+  height: 48px;
+}
+
+.input-group textarea {
+  height: 100px;
+  padding: 1rem;
+  font-family: inherit;
+  resize: none;
+}
+
+.form-container button{
+  width: 80%;
+  height: 48px;
+  background-color: var(--pointcolor);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-container button:hover{
+  background-color: #c3572c;
+}
+
+/* 입력 필드 포커스 효과 */
+.input-group input:focus,
+.input-group textarea:focus{
+  outline: none;
+  box-shadow: 0 0 0 1px var(--pointcolor);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .form-container {
+    width: 90%;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+  
+  .input-group {
+    width: 90%;
+  }
+  
+  .form-container button {
+    width: 90%;
+  }
+}
 
 @media (max-width: 480px){
 
@@ -678,6 +817,7 @@ header h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
   .about .text p{ max-width: 60ch; line-height: 1.9; }
 
@@ -708,7 +848,7 @@ header h1{
   
   .skill_list{
     width: 90vw;
-    outline: 1px solid #f78254;
+
 }
 
 
@@ -723,8 +863,4 @@ header h1{
   .modal{ 
     height:100%; 
     border-radius:0; }
-
-
-
-  
 }

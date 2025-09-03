@@ -34,6 +34,17 @@
                     </div>
                 </div>
             </div>
+            <!-- 배경: 민들레 홀씨 컨테이너 -->
+            <div class="floating-seeds" aria-hidden="true">
+                <span class="seed s1"></span>
+                <span class="seed s2"></span>
+                <span class="seed s3"></span>
+                <span class="seed s4"></span>
+                <span class="seed s5"></span>
+                <span class="seed s6"></span>
+                <span class="seed s7"></span>
+                <span class="seed s8"></span>
+            </div>
             <div class="title-container">   
                 <p>
                     경험으로 성장하는 디자이너, 
@@ -115,7 +126,7 @@
                     </div>
                     <div class="text">    
                         <h4>다이어트 챌린지 '다챌'</h4>
-                        <p>다이어트 챌린지을 위한 앱</p>
+                        <p>다이어트 챌린지를 위한 앱</p>
                     </div>
                     <div class="tag">  
                         <p>ui/ux</p>
@@ -246,7 +257,7 @@
 
             <div class="contents">
            
-            <a href="mailto:zhwjdzh91@naver.com" class="mail">
+            <!-- <a href="mailto:zhwjdzh91@naver.com" class="mail">
                 <img src="./images/icons/mail.svg" alt="메일">
                 <p>메일
                     보내기</p>
@@ -256,12 +267,27 @@
                 <img src="./images/icons/google/insta-1.svg" alt="인스타그램 로고">
                 <p>인스타그램 
                   보러가기</p>
-            </a>
-            <form>
-                <input type="email" required>
-                <button type="submit">보내기</button> 
+            </a> -->
+            <form action="https://api.web3forms.com/submit" method="POST" class="form-container">
+                <input type="hidden" name="access_key" value="fd7f7ce2-0017-443f-b715-829d3828a65f">
+                
+                <div class="input-group">
+                    <label class="input-title">이름</label>
+                    <input type="text" name="name" placeholder="이름을 입력하세요" required>
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-title">이메일</label>
+                    <input type="email" name="email" placeholder="이메일을 입력하세요" required>
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-title">내용</label>
+                    <textarea name="message" placeholder="내용을 입력하세요" required></textarea>
+                </div>
+                
+                <button type="submit">보내기</button>
             </form>
-
             </div>
         </section>
     </div>
