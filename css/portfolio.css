@@ -26,7 +26,7 @@
     --pointcolor:#f78254;
     --hero-fs: clamp(72px, 10vw, 100px); /* 최소, 선형 비율, 최대 */
     --font-size : calc(var(--hero-fs) * 0.8);
-    --gutter: clamp(16px, 5vw, 24px);
+    --gutter: clamp(18px, 5vw, 24px);
 }
 
 
@@ -743,6 +743,24 @@ header h1{
     text-align: center;
     padding: 0.8rem 1.2rem;
 }
+/* 메인 타이틀 중앙 정렬 */
+.visual_container{
+    display: grid;
+    place-items: center;
+    width: 100%;
+}
+.visual_container .title-container{
+    margin-left: 0;
+    text-align: center;
+}
+.visual_container .coco{
+    margin-top: 2.0rem;
+}
+.visual_container .coco::before{
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(var(--font-size) * -0.5);
+}
 /* .visual_container .title-container{
 
 
@@ -795,18 +813,23 @@ header h1{
   .gnb_container{
     display: flex;
     align-items:center;
+    justify-content: center;
+    width: 100%;
 
   }
   .menus{
-    margin: 0 16px;
-    gap: 8px;
-    font-size: 0.9rem;
-    padding: 0 2px;
+    margin: 0 12px;
+    gap: 6px;
+    font-size: 0.85rem;
+    padding: 0 4px;
+    justify-content: center;
   }
   .menus a{
-    width: 110px;
-    height: 44px;
-    border-radius: 14px 14px 0 0;
+    width: auto;
+    min-width: 84px;
+    height: 40px;
+    padding: 0 12px;
+    border-radius: 12px 12px 0 0;
   }
 
    /* About */
@@ -818,6 +841,7 @@ header h1{
     justify-content: center;
     align-items: center;
     text-align: center;
+    gap: 8px;
 }
   .about .text p{ max-width: 60ch; line-height: 1.9; }
 
@@ -837,12 +861,15 @@ header h1{
 
   /* 연락처/푸터 */
   .contact p{ 
-    font-size: 0.4rem; 
+    font-size: 1.2rem; 
 }
   .contact span{ font-size: 1.4rem; }
   .contents{ gap: 24px; margin-top: 28px; }
   .contents .insta img, .contents .mail img{ width: 36px; height: 36px; }
-  footer{ padding: 24px 20px; font-size: 0.95rem; }
+  footer{ padding: 24px 20px; 
+          font-size: 0.85rem;
+          text-align: center;
+         }
 
 
   
