@@ -24,8 +24,9 @@
 :root{
     --fontcolor:#691E00;
     --pointcolor:#f78254;
-     --hero-fs: clamp(68px, 10vw, 120px); /* 최소, 선형 비율, 최대 */
-  --font-size : calc(var(--hero-fs) * 0.8);
+    --hero-fs: clamp(72px, 10vw, 100px); /* 최소, 선형 비율, 최대 */
+    --font-size : calc(var(--hero-fs) * 0.8);
+    --gutter: clamp(16px, 5vw, 24px);
 }
 
 
@@ -39,20 +40,12 @@ body{
     font-style: normal;
     scroll-behavior: smooth;
 }
-body{
-    display: flex;
-    flex-direction: column;
-}
-.tab_contents_container{
-    flex: 1;
-}
 
 a{
     transition: 0.5s;
 }
-
 .bg{ 
-    min-height: 600px;
+    min-height: 580px;
      background:
     /* 좌하 붉은 원 (위쪽 레이어) */
     radial-gradient(400px 400px at 10% 90%,
@@ -84,24 +77,41 @@ a{
 .bg, .tab_contents_container {
      scroll-margin-top: calc(var(--header-offset, 80px) + 60px);
     }
+.tab_contents_container > section { 
+  padding-inline: var(--gutter);
+}
+
+.about,
+.portfolio,
+.work { 
+  padding-inline: var(--gutter);
+}
 
 header h1{
-    padding: 1.6rem 3.8rem;
-    font-size: 1.2rem;
+    padding: 1rem 3rem;
+    font-size: 1.3rem;
+    /* font-family: "Montserrat",sans-serif; */
     font-family: "Krona One", sans-serif;
     font-weight: 500;
     background-color: rgba(255, 255, 255, 0.6);
     color: var(--fontcolor);
     position: fixed;
+    letter-spacing: -0.01rem;
     top: 0;
     width: 100%;
+    z-index: 50;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    backdrop-filter: saturate(160%) blur(6px);
 
 }
 
-.visual_container{
-    padding-top: 100px;
+ body.is-scrolled header h1{
+   background-color: #fff;
+   box-shadow: 0 4px 16px rgba(0,0,0,.06);
+ }
 
-    
+.visual_container{
+
 }
 
 /* 배경 마키 컨테이너 */
@@ -147,20 +157,15 @@ header h1{
     z-index: 1; 
 }
 
-.visual_container .title-container{
-
-    margin-left: clamp(16px, 4vw, 60px);
-    color: var(--fontcolor);
-   
-
-}
-
 
 .visual_container .title-container{
     font-family:'NexonLv1Gothic', sans-serif;
+    margin-left: 3rem;
+    color: var(--fontcolor);
     font-size: clamp(20px, 1.6vw, 24px);
     position: relative;
     z-index: 2;
+    top: 2.5rem;
 
 }
 
@@ -168,17 +173,6 @@ header h1{
     display:flex;
     flex-direction: column;
     line-height:1;
-}
-/* .visual_container .title-container strong{
-
-    font-family: "Hurricane", cursive; 
-    font-size: calc(var(--hero-fs) * 0.8);
-    color: var(--pointcolor);
-    outline: 1px solid red;
- 
-} */
-.visual_container {
-  
 }
 
 .visual_container .coco {
@@ -213,7 +207,7 @@ header h1{
 .gnb_container{
     position: absolute;
     bottom: 0;
-    color: #77635c;
+    color: #927b73;
     
 }
 
@@ -269,7 +263,7 @@ header h1{
     justify-content: center;
     gap: 60px;
     flex-wrap: wrap;
-    margin-top: 100px;
+    padding: 100px 24px;
 
     
 }
@@ -296,7 +290,8 @@ header h1{
 }
 
 
-.about h3{
+.about h3,
+.skill h3{
     font-family: "Montserrat",sans-serif;
     font-weight: 600;
     font-size: 1.5rem;
@@ -314,28 +309,35 @@ header h1{
 }
 
 .about .skill{
+    width: 90%;
     display: flex;
-    margin-top: 30px;
+    flex-direction: column; 
+    align-items: flex-start;
+    margin-top: 2rem;
+
 
 
 }
 
+.skill h3{
+    width: 100%;
+}
 .about .skill_list{
-   
     display: flex;
-    gap: 20px;
+    gap: 1.6rem;
+
 }
 
 .about .skill_list li{
    
-    margin-top: 50px;
-    width: 80px;
+    margin-top: 0.8rem;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    gap: 8px;
-    
+    justify-content: center;
+    gap: 0.4rem;
+
 
 }
 .about .skill_list img{
@@ -374,7 +376,7 @@ header h1{
       width: 100%;
       max-width: 900px;
       min-height: 400px;
-      height: 70%;
+      height: 85%;
       z-index: 100;
       position: fixed;
       left: 50%;
@@ -453,28 +455,31 @@ header h1{
 .card_container{
     display: grid; 
     grid-template-columns: repeat(2, 1fr); /* 2열 유지 */ 
-    gap: 140px; /* 가로/세로 간격 */ 
+    gap: clamp(24px, 6vw, 140px); /* 가로/세로 간격 */ 
     align-items: start; /* 세로 정렬은 보통 start */
 }
 
 
 .card_container li{
-    height: 100%;
-    position: relative;
-    transition: 0.4s;
+  position: relative;
+  isolation: isolate;         /* or: z-index: 0; (폴백) */
+  --r: 18px;                   /* 둥근 모서리 */
+  --dx: clamp(8px, 1.8vw, 25px);  /* → 오프셋 */
+  --dy: clamp(8px, 1.8vw, 20px);  /* ↓ 오프셋 */
+  transition: 0.4s;
 
 }
 
 
 .card_container li::before{
-    content: ''; 
-    background-color:#fdf7ea; 
-    width: 100%; 
-    height: 85%; 
-    position: absolute; 
-    left: 8%;
-    top: 20%; 
-    border-radius: 20px;
+    content: "";
+    position: absolute;
+    inset: 0;                           /* 카드와 같은 크기 */
+    border-radius: var(--r);
+    background: #fdf7ea;
+    transform: translate(var(--dx), var(--dy));  /* 오른쪽·아래로 밀기 */
+    z-index: -1;  
+            
 
 }
 
@@ -488,12 +493,9 @@ header h1{
 
 }
 .card_container li a .thumb{
-    position: relative;
-    display:block;
-    border-radius:18px;
-    overflow:hidden;
-    width: 100%;
-    aspect-ratio: 4 / 3;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--r);
+  overflow: hidden;
 
 }
 
@@ -504,13 +506,21 @@ header h1{
 }
 
 .card_container .text h4{
-    margin: 0.6rem 0 0.5rem 0;
-    font-weight: 700;
-    font-size: 1.9rem;
-    color: var(--fontcolor);
+  font-size: clamp(1.1rem, 2.4vw, 1.9rem);
+  line-height: 1.15;
+  font-weight: 600;
+  word-break: keep-all;               /* 한글 단어 단위 줄바꿈 */
+  display: -webkit-box;               /* 선택: 2줄까지만 */
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: var(--fontcolor);
+  padding-top: 0.8rem;
 }
 .card_container .text p{
-    font-size: 1.2rem;
+   font-size: clamp(.9rem, 1.4vw, 1.2rem);
+   line-height: 2;
+   word-break: keep-all;
     
 }
 
@@ -521,12 +531,12 @@ header h1{
 }
 
 .card_container .tag p{
-    color: #a7a7a7;
-    font-size: 1rem;
+    color: #7c7c7c;
+    font-size: clamp(.8rem, 1.2vw, 1rem);
 }
 .card_container .tag p::before{
     content: '#';
-    color: #a7a7a7;
+    color: #7c7c7c;
 
 }
 
@@ -577,38 +587,134 @@ header h1{
 footer{
     margin-top: 100px;
     background: #fff6e9;
-    padding: 30px 60px;
+    padding: 1.2rem 3rem;
     font-size: 1rem;
 }
 
 
 
-@media all and (max-width: 480px){
+@media (max-width: 480px){
 
+.bg{ 
+    justify-content: center; 
+}
 header h1{
     font-size: 1rem;
     text-align: center;
+    padding: 0.8rem 1.2rem;
 }
-.inner{
-    width: 80%;
-}
-.inner p { 
+/* .visual_container .title-container{
+
+
+    width: max-content;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+
     align-items: center;
-    font-size: 1.2rem;
+
+
 }
-.inner strong{
-    font-size: 5rem;
+
+  .visual_container .coco {
+    display: inline-block;
+    margin-top: calc(var(--font-size) * 0.8);
+    font-size: var(--hero-fs);
+    font-weight: 800;
+
+  }
+ .visual_container .coco::before{
+    top: calc(var(--font-size) * -0.5);
+    left: 50%;
+    transform: translateX(-50%);   /* 가운데 정렬 */
+  /* }  */
+
+   /* 부모를 중앙 배치용 그리드로 */
+  .visual_container{
+    display: grid;
+    place-items: center;   /* 가로/세로 모두 중앙 */
+    width: 100%;
+  }
+
+  /* 자식의 왼쪽 마진 제거 */
+  .visual_container .title-container{
+    text-align: center;
+
+  }
+
+.visual_container .coco{
+    margin-top: 2.6rem;
 }
-.inner .name{
-    font-size: 4.5rem;
-    padding-top: 0.8rem;
+  .visual_container .coco::before{
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(var(--font-size) * -0.5);
+  }
+
+/* 네비게이션 */
+  .gnb_container{
+    display: flex;
+    align-items:center;
+
+  }
+  .menus{
+    margin: 0 16px;
+    gap: 8px;
+    font-size: 0.9rem;
+    padding: 0 2px;
+  }
+  .menus a{
+    width: 110px;
+    height: 44px;
+    border-radius: 14px 14px 0 0;
+  }
+
+   /* About */
+  .about{  gap: 28px; margin-top: 64px; }
+  .about .profile{ width: 220px; height: 220px; }
+  .about .text{max-width: 100%;}
+  .about .skill_list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  .about .text p{ max-width: 60ch; line-height: 1.9; }
+
+
+  /* 카드: 1열 전환, 과한 hover 제거 */
+  .card_container{
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .card_container li{ transform: none; }
+  .card_container li:hover{ scale: 1; }
+  .card_container li::before{ display: none; }
+
+  .card_container .text h4{ font-size: 1.6rem; }
+  .card_container .text p{ font-size: 1rem; }
+
+
+  /* 연락처/푸터 */
+  .contact p{ 
+    font-size: 0.4rem; 
+}
+  .contact span{ font-size: 1.4rem; }
+  .contents{ gap: 24px; margin-top: 28px; }
+  .contents .insta img, .contents .mail img{ width: 36px; height: 36px; }
+  footer{ padding: 24px 20px; font-size: 0.95rem; }
+
+
+  
+  .skill_list{
+    width: 90vw;
+    outline: 1px solid #f78254;
 }
 
 
   .modal-container{ 
 
-    width:100vw; 
-    height:100dvh; 
+    width:90vw; 
+    height:90dvh; 
     max-height:none;  
     border-radius: 0.5rem;
 
@@ -616,7 +722,8 @@ header h1{
   .modal{ 
     height:100%; 
     border-radius:0; }
-  .card_container li::before{
-    display: none;
-  }
+
+
+
+  
 }

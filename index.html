@@ -17,13 +17,11 @@
     <!--메인-->
    <div class="bg">
         <header>
-            <h1>Hojeong portfolio</h1>
+            <h1>Hojeong Portfolio</h1>
         </header>
 
         <section class="visual_container">
-            <!-- <h2 class="bg_text">
-                UXUI DESIGN WEB DESIGN GRAPHIC DESIGN
-            </h2>  -->
+
 
             <div class="bg-marquee" aria-hidden="true">
                 <div class="bg-marquee__track">
@@ -50,7 +48,6 @@
                     <span>Portfolio</span>
                 </strong>
             </div>
-
             <nav class="gnb_container">
             <ul class="menus" role="tablist">
                 <li>
@@ -248,14 +245,17 @@
             <span>zhwjdzh91@naver.com</span>
 
             <div class="contents">
-            <a href="https://www.instagram.com/91coho/" class="insta">
-                <img src="./images/icons/google/insta-1.svg" alt="인스타그램 로고">
-                <p>인스타그램 보러가기</p>
-            </a>
+           
             <a href="mailto:zhwjdzh91@naver.com" class="mail">
-                
                 <img src="./images/icons/mail.svg" alt="메일">
-                <p>메일 보내기</p>
+                <p>메일
+                    보내기</p>
+            </a>
+
+             <a href="https://www.instagram.com/91coho/" class="insta">
+                <img src="./images/icons/google/insta-1.svg" alt="인스타그램 로고">
+                <p>인스타그램 
+                  보러가기</p>
             </a>
             <form>
                 <input type="email" required>
@@ -467,6 +467,14 @@
             // 닫기 버튼 & 딤 클릭
             closeBtn?.addEventListener('click', closeModal);
             dimm?.addEventListener('click', closeModal);
+        </script>
+
+        <script>
+            const hero = document.querySelector('.bg');
+            const obs = new IntersectionObserver(([e]) => {
+                document.body.classList.toggle('is-scrolled', !e.isIntersecting);
+            }, { threshold: 0.01 });
+            if (hero) obs.observe(hero);
         </script>
 </body>
 </html>
