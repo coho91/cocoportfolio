@@ -526,7 +526,7 @@ header h1{
     position: absolute;
     inset: 0;                           /* 카드와 같은 크기 */
     border-radius: var(--r);
-    background: #fdf7ea;
+    background: #fff9ed;
     transform: translate(var(--dx), var(--dy));  /* 오른쪽·아래로 밀기 */
     z-index: -1;  
             
