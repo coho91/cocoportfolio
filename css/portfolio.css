@@ -88,8 +88,8 @@ a{
 }
 
 header h1{
-    padding: 1rem 3rem;
-    font-size: 1.5rem;
+    padding: 1.2rem 3rem;
+    font-size: 1.4rem;
     font-family: "Montserrat",sans-serif;
     /* font-family: "Krona One", sans-serif; */
     font-weight: 600;
@@ -424,7 +424,7 @@ header h1{
       border-radius: 20px;
       padding: 1.5rem;
       width: 100%;
-      max-width: 900px;
+      max-width: 1200px;
       min-height: 400px;
       height: 85%;
       z-index: 100;
@@ -521,17 +521,15 @@ header h1{
 }
 
 
-.card_container li::before{
+/* .card_container li::before{
     content: "";
     position: absolute;
-    inset: 0;                           /* 카드와 같은 크기 */
+    inset: 0;                         
     border-radius: var(--r);
     background: #fff9ed;
-    transform: translate(var(--dx), var(--dy));  /* 오른쪽·아래로 밀기 */
+    transform: translate(var(--dx), var(--dy)); 
     z-index: -1;  
-            
-
-}
+} */
 
 .card_container li:hover{
     scale: 1.1;
