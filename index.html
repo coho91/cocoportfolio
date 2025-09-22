@@ -159,65 +159,98 @@
             <section id="work" class="work" role="tabpanel" hidden>
                 <ul class="card_container">
                <li>
-                    <a href="#" data-id="dachal">
+                    <a href="#" data-id="poly1">
                     <div class="thumb">
-                        <img src="./images/card_thumb_0.jpg" alt="썸네일">
+                        <img src="./images/portfolio/thumb/poly1.jpg" alt="썸네일">
                     </div>
                     <div class="text">    
-                        <h4>다이어트 챌린지 '다챌'</h4>
-                        <p>다이어트 챌린지을 위한 앱</p>
+                        <h4>폴리어학원 랜딩페이지</h4>
+                        <p>GRAD프로그램 프로모션 랜딩페이지</p>
                     </div>
                     <div class="tag">  
-                        <p>ui/ux</p>
-                        <p>app</p>
+                        <p>ContentsDesign</p>
+                        <p>PromotionDesign</p>
+                        <p>Landingpage</p>
                     </div>
                     </a> 
                 </li>
-                <li>
-                    <a href="#" data-id="planpill">
+                 <li>
+                    <a href="#" data-id="poly2">
                     <div class="thumb">
-                        <img src="./images/card_thumb_0.jpg" alt="썸네일">
+                        <img src="./images/portfolio/thumb/poly2.jpg" alt="썸네일">
                     </div>
                     <div class="text">    
-                        <h4>약 복용 'Planpill' </h4>
-                        <p>약 복용을 위한 앱</p>
+                        <h4>폴리어학원 상세페이지 </h4>
+                        <p> AI Writing 프로그램 상세페이지</p>
                     </div>
                     <div class="tag">  
-                        <p>ui/ux</p>
-                        <p>app</p>
+                        <p>ContentsDesign</p>
+                        <p>PromotionDesign</p>
+                        <p>Detailpage</p>
                     </div>
                     </a> 
                 </li>
                <li>
-                    <a href="#" data-id="dachal">
+                    <a href="#" data-id="canb">
                     <div class="thumb">
-                        <img src="./images/card_thumb_0.jpg" alt="썸네일">
+                        <img src="./images/portfolio/thumb/canb.png" alt="썸네일">
                     </div>
                     <div class="text">    
-                        <h4>다이어트 챌린지 '다챌'</h4>
-                        <p>다이어트 챌린지을 위한 앱</p>
+                        <h4>캔비어학원 SNS 디자인</h4>
+                        <p>SNS콘텐츠 디자인</p>
                     </div>
                     <div class="tag">  
-                        <p>ui/ux</p>
-                        <p>app</p>
+                        <p>ContentsDesign</p>
+                        <p>PromotionDesign</p>
+                        <p>SNSContents</p>
                     </div>
                     </a> 
                 </li>
                 <li>
-                    <a href="#" data-id="planpill">
+                    <a href="#" data-id="beauty1">
                     <div class="thumb">
-                        <img src="./images/card_thumb_0.jpg" alt="썸네일">
+                        <img src="./images/portfolio/thumb/beauty1.jpg" alt="썸네일">
                     </div>
                     <div class="text">    
-                        <h4>약 복용 'Planpill' </h4>
-                        <p>약 복용을 위한 앱</p>
+                        <h4>뷰티피플 메이크업세트 상세페이지</h4>
+                        <p>코스메틱 상세페이지</p>
                     </div>
                     <div class="tag">  
-                        <p>ui/ux</p>
-                        <p>app</p>
+                        <p>ContentsDesign</p>
+                        <p>Detailpage</p>
                     </div>
                     </a> 
-                </li>           
+                </li>
+                <li>
+                    <a href="#" data-id="beauty2">
+                    <div class="thumb">
+                        <img src="./images/portfolio/thumb/beauty2.jpg" alt="썸네일">
+                    </div>
+                    <div class="text">    
+                        <h4>뷰티피플 쿠션파운데이션 상세페이지</h4>
+                        <p>코스메틱 상세페이지</p>
+                    </div>
+                    <div class="tag">  
+                        <p>ContentsDesign</p>
+                        <p>Detailpage</p>
+                    </div>
+                    </a> 
+                </li>
+                <li>
+                    <a href="#" data-id="casamaru">
+                    <div class="thumb">
+                        <img src="./images/portfolio/thumb/casamaru.jpg" alt="썸네일">
+                    </div>
+                    <div class="text">    
+                        <h4>까사마루 프로모션 디자인</h4>
+                        <p>기획전 프로모션 디자인</p>
+                    </div>
+                    <div class="tag">  
+                        <p>ContentsDesign</p>
+                        <p>PromotionDesign</p>
+                    </div>
+                    </a> 
+                </li>              
             </ul>
             </section>
 
@@ -343,7 +376,7 @@
             const modal = modalContainer.querySelector('.modal');
             const modalBody = modalContainer.querySelector('.modal-body');
             const closeBtn = modalContainer.querySelector('.modal-close');
-            const cardContainer = document.querySelector('#portfolio .card_container');
+            const contentsContainer = document.querySelector('.tab_contents_container');
 
             // 모달 상세내용
             const PROJECTS = {
@@ -411,8 +444,74 @@
                     "./images/portfolio/planpill_9.png",
                     "./images/portfolio/planpill_10.png",
                ],
-                desc: `<p>복약 일정 등록, 알림, 달력 이력/진행률 UI에 집중한 팀프로젝트입니다.</p>`
-                }
+                desc: `<p>복약 일정 등록, 알림, 달력, 진행률 UI에 집중한 팀프로젝트입니다.</p>`
+                },
+                poly1: {
+                title: "Poly 어학원 랜딩페이지",
+                subtitle: "새로운 GRAD 프로그램의 프로모션 랜딩페이지",
+                period: "2024.04 – 2024.04",
+                role: "Contents · Promotion",
+                tools: ["Photoshop", "Illustrator"],
+                images: [
+                    "./images/portfolio/poly1_1.png",
+               ],
+                desc: `<p></p>`
+                },
+                poly2: {
+                title: "Poly 어학원 상세페이지",
+                subtitle: "AI Writing 프로그램 상세페이지",
+                period: "2024.02 – 2024.02",
+                role: "Contents · Detailpage",
+                tools: ["Photoshop", "Illustrator"],
+                images: [
+                    "./images/portfolio/poly1_2.png",
+               ],
+                desc: `<p></p>`
+                },
+                canb: {
+                title: "CANB 어학원 SNS 콘텐츠 디자인",
+                subtitle: "SNS 콘텐츠 작업물",
+                period: "2023.03 – 2024.05",
+                role: "Contents · SNS",
+                tools: ["Photoshop", "Illustrator"],
+                images: [
+                    "./images/portfolio/canb1.png",
+               ],
+                desc: `<p></p>`
+                },
+                beauty1: {
+                title: "뷰티피플 메이크업세트 상세페이지",
+                subtitle: "코스메틱 상세페이지",
+                period: "2021.09 – 2021.09",
+                role: "Contents · Detailpage",
+                tools: ["Photoshop", "Illustrator"],
+                images: [
+                    "./images/portfolio/beauty1.jpg",
+               ],
+                desc: `<p></p>`
+                },
+                beauty2: {
+                title: "뷰티피플 쿠션파운데이션 상세페이지",
+                subtitle: "코스메틱 상세페이지",
+                period: "2021.12 – 2021.12",
+                role: "Contents · Detailpage",
+                tools: ["Photoshop", "Illustrator"],
+                images: [
+                    "./images/portfolio/beauty2.png",
+               ],
+                desc: `<p></p>`
+                },
+                casamaru: {
+                title: "까사마루 프로모션 디자인",
+                subtitle: "온라인 기획전 디자인",
+                period: "2018.05 – 2020.10",
+                role: "Contents · Promotion",
+                tools: ["Photoshop", "Illustrator"],
+                images: [
+                    "./images/portfolio/casamaru.png",
+               ],
+                desc: `<p></p>`
+                },
             };
 
             // 모달 열기(카드 id로)
@@ -487,9 +586,9 @@
                 document.removeEventListener('keydown', onEscClose);
             }
 
-            // 카드 클릭 → 모달 오픈 (a[data-id] 필요)
-            if (cardContainer) {
-                cardContainer.addEventListener('click', (e) => {
+            // 카드 클릭 → 모달 오픈 (a[data-id] 필요) - 전체 탭 컨테이너 위임
+            if (contentsContainer) {
+                contentsContainer.addEventListener('click', (e) => {
                 const link = e.target.closest('a[data-id]');
                 if (!link) return;
                 e.preventDefault();
