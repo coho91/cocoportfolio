@@ -323,6 +323,7 @@ body.is-scrolled .site-header {
     line-height: .95;
     letter-spacing: -.02em;
     color: var(--brand);
+    margin-top: -.18em;
 }
 
 .hero__lead {
