@@ -1,612 +1,780 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hojeong portfolio</title>
+
+    <title>박호정 · UX/UI 디자이너 포트폴리오</title>
+    <meta name="description" content="경험으로 성장하는 UX/UI 디자이너 박호정의 포트폴리오. 다이어트 챌린지 '다챌', 복약 관리 'Plan Pill' 등 앱 UX/UI와 웹 콘텐츠 디자인 작업을 소개합니다.">
+    <meta name="author" content="박호정">
+    <link rel="canonical" href="https://coho91.github.io/cocoportfolio/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="박호정 · UX/UI 디자이너 포트폴리오">
+    <meta property="og:description" content="사용자 중심의 가치로 새로운 흐름을 만들어가는 UX/UI 디자이너 박호정의 포트폴리오입니다.">
+    <meta property="og:url" content="https://coho91.github.io/cocoportfolio/">
+    <meta property="og:image" content="https://coho91.github.io/cocoportfolio/images/portfolio/thumb/dachal.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/portfolio.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Hurricane&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Hurricane&family=Montserrat:wght@400;600;700;800;900&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!--메인-->
-   <div class="bg">
-        <header>
+    <!-- ========== 헤더 ========== -->
+    <header class="site-header">
+        <div class="container">
             <h1>Hojeong Portfolio</h1>
-        </header>
+            <a class="header-mail" href="mailto:zhwjdzh91@naver.com">zhwjdzh91@naver.com</a>
+        </div>
+    </header>
 
-        <section class="visual_container">
+    <!-- ========== 히어로 ========== -->
+    <section class="hero">
+        <div class="bg-marquee" aria-hidden="true">
+            <div class="bg-marquee__track">
+                <div class="bg-marquee__item">UXUI DESIGN &nbsp;•&nbsp; WEB DESIGN &nbsp;•&nbsp; GRAPHIC DESIGN &nbsp;•&nbsp;</div>
+                <div class="bg-marquee__item">UXUI DESIGN &nbsp;•&nbsp; WEB DESIGN &nbsp;•&nbsp; GRAPHIC DESIGN &nbsp;•&nbsp;</div>
+            </div>
+        </div>
 
+        <div class="floating-seeds" aria-hidden="true">
+            <span class="seed s1"></span><span class="seed s2"></span>
+            <span class="seed s3"></span><span class="seed s4"></span>
+            <span class="seed s5"></span><span class="seed s6"></span>
+            <span class="seed s7"></span><span class="seed s8"></span>
+        </div>
 
-            <div class="bg-marquee" aria-hidden="true">
-                <div class="bg-marquee__track">
-                    <div class="bg-marquee__item">
-                    UXUI DESIGN WEB DESIGN GRAPHIC DESIGN • UXUI DESIGN WEB DESIGN GRAPHIC DESIGN • UXUI DESIGN WEB DESIGN GRAPHIC DESIGN •
-                    </div>
-                    <!-- 동일한 콘텐츠를 한 번 더 (무한 루프용) -->
-                    <div class="bg-marquee__item" aria-hidden="true">
-                    UXUI DESIGN WEB DESIGN GRAPHIC DESIGN • UXUI DESIGN WEB DESIGN GRAPHIC DESIGN • UXUI DESIGN WEB DESIGN GRAPHIC DESIGN •
-                    </div>
+        <div class="container hero__inner">
+            <div class="hero__copy">
+                <p class="hero__eyebrow">경험으로 성장하는 디자이너,</p>
+                <h2 class="hero__wordmark">
+                    <span class="blind">CoCo Portfolio</span>
+                    <span class="hero__script" aria-hidden="true">CoCo</span>
+                    <span class="hero__title" aria-hidden="true">Portfolio</span>
+                </h2>
+                <p class="hero__lead">
+                    트렌드를 따라가는 것을 넘어, 사용자 중심의 가치로
+                    새로운 흐름을 만들어가는 UX/UI 디자이너 <strong>박호정</strong>입니다.
+                </p>
+                <div class="hero__actions">
+                    <a class="btn btn--primary" href="#portfolio">프로젝트 보기</a>
+                    <a class="btn btn--ghost" href="mailto:zhwjdzh91@naver.com">메일 보내기</a>
                 </div>
             </div>
-            <!-- 배경: 민들레 홀씨 컨테이너 -->
-            <div class="floating-seeds" aria-hidden="true">
-                <span class="seed s1"></span>
-                <span class="seed s2"></span>
-                <span class="seed s3"></span>
-                <span class="seed s4"></span>
-                <span class="seed s5"></span>
-                <span class="seed s6"></span>
-                <span class="seed s7"></span>
-                <span class="seed s8"></span>
-            </div>
-            <div class="title-container">   
-                <p>
-                    경험으로 성장하는 디자이너, 
-                    <span class="blind">CoCo</span>
-                </p>
-                <!-- <div class="name-container">
-                    <strong>Coco</strong>
-                    <em>Portfolio</em> 
-                </div> -->
 
-                <strong class="coco">
-                    <span>Portfolio</span>
-                </strong>
+            <div class="hero__visual">
+                <div class="hero__photo" role="img" aria-label="디자이너 박호정 프로필 사진"></div>
+                <span class="hero__chip">UX / UI</span>
+                <span class="hero__chip">Web Design</span>
+                <span class="hero__chip">Graphic</span>
             </div>
-            <nav class="gnb_container">
-            <ul class="menus" role="tablist">
-                <li>
-                    <a href="#about" role="tab" aria-controls="about" aria-selected="true">
-                    About</a>
-                </li>
-                <li>
-                    <a href="#portfolio" role="tab" aria-controls="portfolio">Portfolio</a>
-                </li>
-                <li>
-                    <a href="#work" role="tab" aria-controls="work">Work</a>
-                </li>
-                <li>
-                    <a href="#contact" role="tab" aria-controls="contact">Contact</a>
-                </li>
-            </ul>
-        </nav> 
+        </div>
     </section>
-    </div>
 
-    <div class="tab_contents_container">
-        <section id="about" class="about" role="tabpanel" aria-labelledby="about-tab" >
-            <div class="profile">
-            <span class="blind">이미지 사진</span>
-            </div>
-            <div class="text">
-                <h3>About me</h3>
-                <p>안녕하세요 항상 즐기고 성장하는 UX/UI        디자이너 박호정입니다. <br>
-                    저는 평소 호기심이 많고, 새로운 것을 배우는 데 즐거움을 느끼는 사람입니다.
-                    캘리그라피, 디지털 드로잉, 타이포그래피 등 다양한 분야에 관심을 가지고 있으며 
-                    꾸준히 취미 활동을 하고있습니다. <br>
-                    기존 웹 콘텐츠 디자인 작업을 하면서 자연스럽게 UI/UX 디자인에 관심을 가지게 되었고 디자인이 단순히 보여지는 것이 아닌 사용자를 위한 일이라는걸 다시 깨닫게 되었습니다.
-                    단순히 트렌드만을 따라가는 것이 아닌, 사용자 중심의 가치를 바탕으로 새로운 흐름을 만들어갈 수 있는 UX/UI 디자이너로 성장하고자 합니다.
-                </p>
-                <div class="skill">
-                    <h3>Skill</h3>
-                    <ul class="skill_list">
-                        <li>
-                            <img src="./images/portfolio/Group.svg" alt="피그마 로고">
-                            <p>Figma</p>
-                        </li>
-                        <li>
-                            <img src="./images/portfolio/devicon_photoshop.svg" alt="포토샵 로고">
-                            <p>Photoshop</p>
-                        </li>
-                        <li>
-                            <img src="./images/portfolio/devicon_illustrator.svg" alt="일러스트레이터 로고">
-                            <p>Illustrator</p>
-                        </li>
-                        <li>
-                            <img src="./images/portfolio/logos_adobe-indesign.svg" alt="인디자인 로고">
-                            <p>InDesign</p>
-                        </li>
-                </ul>
+    <!-- ========== 탭 내비게이션 ========== -->
+    <nav class="tabbar" aria-label="포트폴리오 섹션">
+        <div class="container">
+            <ul class="menus" role="tablist">
+                <li><a id="tab-about"     href="#about"     role="tab" aria-controls="about"     aria-selected="true">About</a></li>
+                <li><a id="tab-portfolio" href="#portfolio" role="tab" aria-controls="portfolio" aria-selected="false">Portfolio</a></li>
+                <li><a id="tab-work"      href="#work"      role="tab" aria-controls="work"      aria-selected="false">Work</a></li>
+                <li><a id="tab-contact"   href="#contact"   role="tab" aria-controls="contact"   aria-selected="false">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ========== 탭 콘텐츠 ========== -->
+    <main class="tab_contents_container">
+
+        <!-- About -->
+        <section id="about" class="about section" role="tabpanel" aria-labelledby="tab-about">
+            <div class="container">
+                <div class="section-head">
+                    <p class="eyebrow">About me</p>
+                    <h2>즐기면서 성장하는 디자이너</h2>
+                    <p class="desc">호기심에서 출발해 사용자의 문제를 푸는 일까지, 제가 디자인을 대하는 방식입니다.</p>
+                </div>
+
+                <div class="about__grid">
+                    <div class="about__bio">
+                        <p>
+                            안녕하세요. 항상 즐기고 성장하는 UX/UI 디자이너 <strong>박호정</strong>입니다.
+                            평소 호기심이 많고 새로운 것을 배우는 데 즐거움을 느낍니다.
+                            캘리그라피, 디지털 드로잉, 타이포그래피 등 다양한 분야에 관심을 두고 꾸준히 취미 활동을 이어오고 있습니다.
+                        </p>
+                        <p>
+                            웹 콘텐츠 디자인 작업을 해오면서 자연스럽게 UI/UX 디자인에 관심을 갖게 되었습니다.
+                            그 과정에서 디자인이 단순히 보여지는 것이 아니라 <strong>사용자를 위한 일</strong>이라는 것을 다시 깨달았습니다.
+                        </p>
+                        <p>
+                            단순히 트렌드만을 따라가는 것이 아닌, 사용자 중심의 가치를 바탕으로
+                            새로운 흐름을 만들어갈 수 있는 UX/UI 디자이너로 성장하고자 합니다.
+                        </p>
+                    </div>
+
+                    <div class="about__side">
+                        <h3>Skill</h3>
+                        <ul class="skill_list">
+                            <li>
+                                <img src="./images/portfolio/Group.svg" alt="" width="38" height="38">
+                                <p>Figma</p>
+                            </li>
+                            <li>
+                                <img src="./images/portfolio/devicon_photoshop.svg" alt="" width="38" height="38">
+                                <p>Photoshop</p>
+                            </li>
+                            <li>
+                                <img src="./images/portfolio/devicon_illustrator.svg" alt="" width="38" height="38">
+                                <p>Illustrator</p>
+                            </li>
+                            <li>
+                                <img src="./images/portfolio/logos_adobe-indesign.svg" alt="" width="38" height="38">
+                                <p>InDesign</p>
+                            </li>
+                        </ul>
+
+                        <!-- TODO: 아래 경력은 기존 프로젝트 기간을 기준으로 정리한 초안입니다.
+                                   실제 소속/직무명에 맞게 수정해 주세요. -->
+                        <h3>Experience</h3>
+                        <ul class="timeline">
+                            <li>
+                                <p class="period">2025.06 – 2025.09</p>
+                                <p class="role">UX/UI 프로젝트</p>
+                                <p class="note">다챌 · Plan Pill 앱 기획 및 UX/UI 디자인</p>
+                            </li>
+                            <li>
+                                <p class="period">2023.03 – 2024.05</p>
+                                <p class="role">어학원 콘텐츠 디자인</p>
+                                <p class="note">폴리·캔비어학원 랜딩/상세페이지, SNS 콘텐츠</p>
+                            </li>
+                            <li>
+                                <p class="period">2021.09 – 2021.12</p>
+                                <p class="role">코스메틱 상세페이지 디자인</p>
+                                <p class="note">뷰티피플 메이크업세트·쿠션파운데이션</p>
+                            </li>
+                            <li>
+                                <p class="period">2018.05 – 2020.10</p>
+                                <p class="role">이커머스 프로모션 디자인</p>
+                                <p class="note">까사마루 온라인 기획전 디자인</p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="portfolio" class="portfolio" role="tabpanel" hidden>
-            <ul class="card_container">
-               <li>
-                    <a href="#" data-id="dachal">
-                    <div class="thumb">
-                        <img src="./images/portfolio/thumb/dachal.png" alt="다챌 썸네일">
-                    </div>
-                    <div class="text">    
-                        <h4>다이어트 챌린지 '다챌'</h4>
-                        <p>다이어트 챌린지 앱</p>
-                    </div>
-                    <div class="tag">  
-                        <p>UI/UX</p>
-                        <p>App</p>
-                        <p>NativeApp</p>
-                    </div>
-                    </a> 
-                </li>
-                <li>
-                    <a href="#" data-id="planpill">
-                    <div class="thumb">
-                        <img src="./images/portfolio/thumb/planpill_thum.png" alt="썸네일">
-                    </div>
-                    <div class="text">    
-                        <h4>약 복용 'Planpill' </h4>
-                        <p>약 복용을 위한 앱</p>
-                    </div>
-                    <div class="tag">  
-                        <p>UI/UX</p>
-                        <p>App</p>
-                        <p>NativeApp</p>
-                    </div>
-                    </a> 
-                </li>
-            </ul>
-            </section>
+        <!-- Portfolio -->
+        <section id="portfolio" class="portfolio section" role="tabpanel" aria-labelledby="tab-portfolio" hidden>
+            <div class="container">
+                <div class="section-head">
+                    <p class="eyebrow">Portfolio</p>
+                    <h2>UX/UI 프로젝트</h2>
+                    <p class="desc">사용자의 습관과 동기에 집중한 모바일 앱 프로젝트입니다. 카드를 눌러 상세 화면을 확인해 보세요.</p>
+                </div>
 
-        
-
-            <section id="work" class="work" role="tabpanel" hidden>
                 <ul class="card_container">
-               <li>
-                    <a href="#" data-id="poly1">
-                    <div class="thumb">
-                        <img src="./images/portfolio/thumb/poly1.jpg" alt="썸네일">
-                    </div>
-                    <div class="text">    
-                        <h4>폴리어학원 랜딩페이지</h4>
-                        <p>GRAD프로그램 프로모션 랜딩페이지</p>
-                    </div>
-                    <div class="tag">  
-                        <p>ContentsDesign</p>
-                        <p>PromotionDesign</p>
-                        <p>Landingpage</p>
-                    </div>
-                    </a> 
-                </li>
-                 <li>
-                    <a href="#" data-id="poly2">
-                    <div class="thumb">
-                        <img src="./images/portfolio/thumb/poly2.jpg" alt="썸네일">
-                    </div>
-                    <div class="text">    
-                        <h4>폴리어학원 상세페이지 </h4>
-                        <p> AI Writing 프로그램 상세페이지</p>
-                    </div>
-                    <div class="tag">  
-                        <p>ContentsDesign</p>
-                        <p>PromotionDesign</p>
-                        <p>Detailpage</p>
-                    </div>
-                    </a> 
-                </li>
-               <li>
-                    <a href="#" data-id="canb">
-                    <div class="thumb">
-                        <img src="./images/portfolio/thumb/canb.png" alt="썸네일">
-                    </div>
-                    <div class="text">    
-                        <h4>캔비어학원 SNS 디자인</h4>
-                        <p>SNS콘텐츠 디자인</p>
-                    </div>
-                    <div class="tag">  
-                        <p>ContentsDesign</p>
-                        <p>PromotionDesign</p>
-                        <p>SNSContents</p>
-                    </div>
-                    </a> 
-                </li>
-                <li>
-                    <a href="#" data-id="beauty1">
-                    <div class="thumb">
-                        <img src="./images/portfolio/thumb/beauty1.jpg" alt="썸네일">
-                    </div>
-                    <div class="text">    
-                        <h4>뷰티피플 메이크업세트 상세페이지</h4>
-                        <p>코스메틱 상세페이지</p>
-                    </div>
-                    <div class="tag">  
-                        <p>ContentsDesign</p>
-                        <p>Detailpage</p>
-                    </div>
-                    </a> 
-                </li>
-                <li>
-                    <a href="#" data-id="beauty2">
-                    <div class="thumb">
-                        <img src="./images/portfolio/thumb/beauty2.jpg" alt="썸네일">
-                    </div>
-                    <div class="text">    
-                        <h4>뷰티피플 쿠션파운데이션 상세페이지</h4>
-                        <p>코스메틱 상세페이지</p>
-                    </div>
-                    <div class="tag">  
-                        <p>ContentsDesign</p>
-                        <p>Detailpage</p>
-                    </div>
-                    </a> 
-                </li>
-                <li>
-                    <a href="#" data-id="casamaru">
-                    <div class="thumb">
-                        <img src="./images/portfolio/thumb/casamaru.jpg" alt="썸네일">
-                    </div>
-                    <div class="text">    
-                        <h4>까사마루 프로모션 디자인</h4>
-                        <p>기획전 프로모션 디자인</p>
-                    </div>
-                    <div class="tag">  
-                        <p>ContentsDesign</p>
-                        <p>PromotionDesign</p>
-                    </div>
-                    </a> 
-                </li>              
-            </ul>
-            </section>
-
-
-            <!--컨택트-->
-        <section id="contact" class="contact" role="tabpanel" hidden>
-            <p>저에 대해 더 궁금하신가요? 연락주세요</p>
-            <span>zhwjdzh91@naver.com</span>
-
-            <div class="contents">
-           
-            <!-- <a href="mailto:zhwjdzh91@naver.com" class="mail">
-                <img src="./images/icons/mail.svg" alt="메일">
-                <p>메일
-                    보내기</p>
-            </a>
-
-             <a href="https://www.instagram.com/91coho/" class="insta">
-                <img src="./images/icons/google/insta-1.svg" alt="인스타그램 로고">
-                <p>인스타그램 
-                  보러가기</p>
-            </a> -->
-            <form action="https://api.web3forms.com/submit" method="POST" class="form-container">
-                <input type="hidden" name="access_key" value="fd7f7ce2-0017-443f-b715-829d3828a65f">
-                
-                <div class="input-group">
-                    <label class="input-title">이름</label>
-                    <input type="text" name="name" placeholder="이름을 입력하세요" required>
-                </div>
-                
-                <div class="input-group">
-                    <label class="input-title">이메일</label>
-                    <input type="email" name="email" placeholder="이메일을 입력하세요" required>
-                </div>
-                
-                <div class="input-group">
-                    <label class="input-title">내용</label>
-                    <textarea name="message" placeholder="내용을 입력하세요" required></textarea>
-                </div>
-                
-                <button type="submit">보내기</button>
-            </form>
+                    <li>
+                        <a class="card" href="#" data-id="dachal">
+                            <div class="thumb">
+                                <img src="./images/portfolio/thumb/dachal.webp" alt="다이어트 챌린지 다챌 대표 이미지" loading="lazy" decoding="async">
+                            </div>
+                            <div class="text">
+                                <h4>다이어트 챌린지 ‘다챌’</h4>
+                                <p>함께 인증하며 이어가는 다이어트 챌린지 앱</p>
+                            </div>
+                            <div class="tag"><p>UI/UX</p><p>App</p><p>NativeApp</p></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="card" href="#" data-id="planpill">
+                            <div class="thumb">
+                                <img src="./images/portfolio/thumb/planpill_thum.webp" alt="복약 관리 앱 Planpill 대표 이미지" loading="lazy" decoding="async">
+                            </div>
+                            <div class="text">
+                                <h4>약 복용 ‘Planpill’</h4>
+                                <p>복약 일정과 습관을 관리하는 앱</p>
+                            </div>
+                            <div class="tag"><p>UI/UX</p><p>App</p><p>NativeApp</p></div>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </section>
-    </div>
 
-    <footer>
-        본 페이지는 개인용 포트폴리오 공간입니다. &copy; hojeong 2025.
+        <!-- Work -->
+        <section id="work" class="work section" role="tabpanel" aria-labelledby="tab-work" hidden>
+            <div class="container">
+                <div class="section-head">
+                    <p class="eyebrow">Work</p>
+                    <h2>콘텐츠 · 프로모션 디자인</h2>
+                    <p class="desc">실무에서 진행한 랜딩페이지, 상세페이지, SNS 콘텐츠 작업입니다.</p>
+                </div>
+
+                <ul class="card_container">
+                    <li>
+                        <a class="card" href="#" data-id="poly1">
+                            <div class="thumb">
+                                <img src="./images/portfolio/thumb/poly1.webp" alt="폴리어학원 랜딩페이지 대표 이미지" loading="lazy" decoding="async">
+                            </div>
+                            <div class="text">
+                                <h4>폴리어학원 랜딩페이지</h4>
+                                <p>GRAD 프로그램 프로모션 랜딩페이지</p>
+                            </div>
+                            <div class="tag"><p>ContentsDesign</p><p>Landingpage</p></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="card" href="#" data-id="poly2">
+                            <div class="thumb">
+                                <img src="./images/portfolio/thumb/poly2.webp" alt="폴리어학원 상세페이지 대표 이미지" loading="lazy" decoding="async">
+                            </div>
+                            <div class="text">
+                                <h4>폴리어학원 상세페이지</h4>
+                                <p>AI Writing 프로그램 상세페이지</p>
+                            </div>
+                            <div class="tag"><p>ContentsDesign</p><p>Detailpage</p></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="card" href="#" data-id="canb">
+                            <div class="thumb">
+                                <img src="./images/portfolio/thumb/canb.webp" alt="캔비어학원 SNS 콘텐츠 대표 이미지" loading="lazy" decoding="async">
+                            </div>
+                            <div class="text">
+                                <h4>캔비어학원 SNS 디자인</h4>
+                                <p>SNS 채널 운영을 위한 콘텐츠 디자인</p>
+                            </div>
+                            <div class="tag"><p>ContentsDesign</p><p>SNSContents</p></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="card" href="#" data-id="beauty1">
+                            <div class="thumb">
+                                <img src="./images/portfolio/thumb/beauty1.webp" alt="뷰티피플 메이크업세트 상세페이지 대표 이미지" loading="lazy" decoding="async">
+                            </div>
+                            <div class="text">
+                                <h4>뷰티피플 메이크업세트 상세페이지</h4>
+                                <p>코스메틱 상세페이지</p>
+                            </div>
+                            <div class="tag"><p>ContentsDesign</p><p>Detailpage</p></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="card" href="#" data-id="beauty2">
+                            <div class="thumb">
+                                <img src="./images/portfolio/thumb/beauty2.webp" alt="뷰티피플 쿠션파운데이션 상세페이지 대표 이미지" loading="lazy" decoding="async">
+                            </div>
+                            <div class="text">
+                                <h4>뷰티피플 쿠션파운데이션 상세페이지</h4>
+                                <p>코스메틱 상세페이지</p>
+                            </div>
+                            <div class="tag"><p>ContentsDesign</p><p>Detailpage</p></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="card" href="#" data-id="casamaru">
+                            <div class="thumb">
+                                <img src="./images/portfolio/thumb/casamaru.webp" alt="까사마루 프로모션 디자인 대표 이미지" loading="lazy" decoding="async">
+                            </div>
+                            <div class="text">
+                                <h4>까사마루 프로모션 디자인</h4>
+                                <p>온라인 기획전 프로모션 디자인</p>
+                            </div>
+                            <div class="tag"><p>ContentsDesign</p><p>PromotionDesign</p></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="contact section" role="tabpanel" aria-labelledby="tab-contact" hidden>
+            <div class="container">
+                <div class="contact__grid">
+                    <div>
+                        <p class="contact__lead">저에 대해 더 궁금하신가요?<br>편하게 연락 주세요.</p>
+                        <a class="contact__mail" href="mailto:zhwjdzh91@naver.com">zhwjdzh91@naver.com</a>
+
+                        <div class="contact__sns">
+                            <a href="mailto:zhwjdzh91@naver.com">
+                                <img src="./images/icons/mail.svg" alt="" width="20" height="20">메일 보내기
+                            </a>
+                            <a href="https://www.instagram.com/91coho/" target="_blank" rel="noopener noreferrer">
+                                <img src="./images/icons/google/insta-1.svg" alt="" width="20" height="20">Instagram
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 폼 전송: Web3Forms
+                         ⚠ access_key는 공개 저장소에 노출됩니다.
+                            web3forms.com 에서 키를 재발급하고 도메인 제한을 설정해 주세요. -->
+                    <form action="https://api.web3forms.com/submit" method="POST" class="form-container">
+                        <input type="hidden" name="access_key" value="fd7f7ce2-0017-443f-b715-829d3828a65f">
+                        <input type="checkbox" name="botcheck" class="blind" tabindex="-1" autocomplete="off">
+
+                        <div class="input-group">
+                            <label class="input-title" for="f-name">이름</label>
+                            <input id="f-name" type="text" name="name" placeholder="이름을 입력하세요" autocomplete="name" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label class="input-title" for="f-email">이메일</label>
+                            <input id="f-email" type="email" name="email" placeholder="이메일을 입력하세요" autocomplete="email" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label class="input-title" for="f-msg">내용</label>
+                            <textarea id="f-msg" name="message" placeholder="내용을 입력하세요" required></textarea>
+                        </div>
+
+                        <button type="submit">보내기</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== 푸터 ========== -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>본 페이지는 개인용 포트폴리오 공간입니다. &copy; hojeong 2025.</p>
+            <p><a href="mailto:zhwjdzh91@naver.com">zhwjdzh91@naver.com</a></p>
+        </div>
     </footer>
 
-    <!-- dimm, modal -->
-    <div class="dimm" aria-hidden="true"></div>
-    <div class="modal-container" aria-hidden="true">
-         <article class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"   tabindex="-1">
-             <button type="button" class="modal-close" aria-label="닫기">
-                <img src="./images/icons/close.svg" alt="닫기">
-             </button>
-             <h2 id="modal-title" class="blind">프로젝트 상세</h2>
-             <div class="modal-body">
-             </div>  <!-- ← 여기에 카드별 내용 주입 -->
+    <!-- ========== 모달 ========== -->
+    <div class="dimm" hidden></div>
+    <div class="modal-container" hidden>
+        <article class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
+            <button type="button" class="modal-close" aria-label="닫기">
+                <img src="./images/icons/close.svg" alt="">
+            </button>
+            <h2 id="modal-title" class="blind">프로젝트 상세</h2>
+            <div class="modal-body"></div>
         </article>
     </div>
-   
-   
-   
-<script>
-  const tabs   = document.querySelectorAll('.menus a[role="tab"]');
-  const panels = document.querySelectorAll('.tab_contents_container > section[role="tabpanel"]');
-  const defaultId = 'about';
-  const headerEl = document.querySelector('header h1');
 
-  // 고정 헤더 높이를 CSS 변수로 반영 → scroll-margin-top에서 사용
-  function setHeaderOffsetVar(){
-    const h = (headerEl?.offsetHeight || 0) + 16; // 여유 16px
-    document.documentElement.style.setProperty('--header-offset', h + 'px');
-  }
-  setHeaderOffsetVar();
-  window.addEventListener('resize', setHeaderOffsetVar);
+    <!-- ========== 라이트박스 ========== -->
+    <div class="lightbox" hidden>
+        <button type="button" class="lightbox__close" aria-label="닫기">✕</button>
+        <button type="button" class="lightbox__prev" aria-label="이전 이미지">‹</button>
+        <img class="lightbox__img" alt="">
+        <button type="button" class="lightbox__next" aria-label="다음 이미지">›</button>
+        <p class="lightbox__cap"></p>
+    </div>
 
-  function activate(id){
-    panels.forEach(p => p.id === id ? p.removeAttribute('hidden') : p.setAttribute('hidden', ''));
-    tabs.forEach(a => a.setAttribute('aria-selected', a.getAttribute('href') === '#' + id ? 'true' : 'false'));
-  }
+    <!-- ========== 스크립트 ========== -->
+    <script>
+    /* ---------- 탭 ---------- */
+    (function () {
+        const tabs = [...document.querySelectorAll('.menus a[role="tab"]')];
+        const panels = [...document.querySelectorAll('.tab_contents_container > section[role="tabpanel"]')];
+        const defaultId = 'about';
 
-  function scrollToSection(id){
-    const target = (id === 'about')
-      ? document.querySelector('.bg')
-      : document.querySelector('.tab_contents_container');
-    // 부드러운 스크롤 (헤더 보정은 CSS scroll-margin-top으로 해결)
-    target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
+        function activate(id, { scroll = false } = {}) {
+            panels.forEach(p => p.toggleAttribute('hidden', p.id !== id));
+            tabs.forEach(a => a.setAttribute('aria-selected', String(a.getAttribute('href') === '#' + id)));
 
-  // 탭 클릭
-  document.querySelector('.menus').addEventListener('click', (e) => {
-    const a = e.target.closest('a[role="tab"]');
-    if (!a) return;
-    const id = a.getAttribute('href').slice(1);
-    if (!document.getElementById(id)) return;
+            if (scroll) {
+                const bar = document.querySelector('.tabbar');
+                const top = bar.getBoundingClientRect().top + window.scrollY
+                          - parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--header-h'));
+                // 이미 탭바보다 위에 있으면 굳이 내리지 않는다
+                if (window.scrollY > top) window.scrollTo({ top, behavior: 'smooth' });
+            }
+        }
 
-    e.preventDefault();
-    history.pushState(null, '', '#' + id);
-    activate(id);
+        document.querySelector('.menus').addEventListener('click', (e) => {
+            const a = e.target.closest('a[role="tab"]');
+            if (!a) return;
+            const id = a.getAttribute('href').slice(1);
+            if (!document.getElementById(id)) return;
+            e.preventDefault();
+            history.pushState(null, '', '#' + id);
+            activate(id, { scroll: true });
+        });
 
-    // 레이아웃 업데이트 후 다음 프레임에 스크롤 (툭 튐 방지)
-    requestAnimationFrame(() => scrollToSection(id));
-  });
+        // 키보드: ← → Home End
+        document.querySelector('.menus').addEventListener('keydown', (e) => {
+            const i = tabs.indexOf(document.activeElement);
+            if (i < 0) return;
+            const map = { ArrowLeft: i - 1, ArrowRight: i + 1, Home: 0, End: tabs.length - 1 };
+            if (!(e.key in map)) return;
+            e.preventDefault();
+            const next = tabs[(map[e.key] + tabs.length) % tabs.length];
+            next.focus();
+            next.click();
+        });
 
-  // 해시 진입/뒤로가기 대응
-  function initFromHash(){
-    const id = location.hash.replace('#','') || defaultId;
-    const validId = document.getElementById(id) ? id : defaultId;
-    activate(validId);
-    requestAnimationFrame(() => scrollToSection(validId));
-  }
-  window.addEventListener('hashchange', initFromHash);
-  initFromHash();
-</script>
-        
-        
-        <script>
-            const dimm = document.querySelector('.dimm');
-            const modalContainer = document.querySelector('.modal-container');
-            const modal = modalContainer.querySelector('.modal');
-            const modalBody = modalContainer.querySelector('.modal-body');
-            const closeBtn = modalContainer.querySelector('.modal-close');
-            const contentsContainer = document.querySelector('.tab_contents_container');
+        function initFromHash() {
+            if (location.hash.startsWith('#project=')) return;   // 프로젝트 딥링크는 모달이 처리
+            const id = location.hash.slice(1) || defaultId;
+            activate(document.getElementById(id) ? id : defaultId);
+        }
+        window.addEventListener('hashchange', initFromHash);
+        initFromHash();
 
-            // 모달 상세내용
-            const PROJECTS = {
-                dachal: {
+        // 히어로 CTA → 탭 전환
+        document.querySelectorAll('.hero a[href^="#"]').forEach(a => {
+            a.addEventListener('click', (e) => {
+                const id = a.getAttribute('href').slice(1);
+                if (!document.getElementById(id)) return;
+                e.preventDefault();
+                history.pushState(null, '', '#' + id);
+                activate(id, { scroll: true });
+            });
+        });
+    })();
+
+    /* ---------- 프로젝트 모달 ---------- */
+    (function () {
+        const dimm = document.querySelector('.dimm');
+        const modalContainer = document.querySelector('.modal-container');
+        const modal = modalContainer.querySelector('.modal');
+        const modalBody = modalContainer.querySelector('.modal-body');
+        const closeBtn = modalContainer.querySelector('.modal-close');
+        const contents = document.querySelector('.tab_contents_container');
+        const lightbox = document.querySelector('.lightbox');
+        const lbImg = lightbox.querySelector('.lightbox__img');
+        const lbCap = lightbox.querySelector('.lightbox__cap');
+        let lastFocused = null;
+        let currentId = null;
+        let currentImages = [];
+        let lbIndex = -1;
+
+        const range = (a, b, dir) =>
+            Array.from({ length: b - a + 1 }, (_, i) => `./images/portfolio/${dir}${a + i}.webp`);
+
+        /* ============================================================
+           케이스 스터디 내용
+           problem / contribution / result 는 모달 상단에 3칸으로 표시됩니다.
+           captions 는 { 이미지순번(1부터): "캡션" } 형태이며, 없는 번호는 캡션 없이 나옵니다.
+
+           ※ TODO 로 표시된 곳은 실제 내용으로 바꿔주세요.
+             빈 문자열("")로 두면 그 항목은 화면에 나오지 않습니다.
+           ============================================================ */
+        const PROJECTS = {
+            dachal: {
                 title: "다이어트 챌린지 ‘다챌’",
                 subtitle: "함께하는 작은 도전, 다이어트 공유 챌린지 앱",
                 period: "2025.06 – 2025.09",
                 role: "UX/UI · App",
                 tools: ["Figma", "Illustrator"],
-                images: [
-                    "./images/portfolio/4.png",
-                    "./images/portfolio/5.png",
-                    "./images/portfolio/6.png",
-                    "./images/portfolio/7.png",
-                    "./images/portfolio/8.png",
-                    "./images/portfolio/9.png",
-                    "./images/portfolio/10.png",
-                    "./images/portfolio/11.png",
-                    "./images/portfolio/12.png",
-                    "./images/portfolio/13.png",
-                    "./images/portfolio/14.png",
-                    "./images/portfolio/15.png",
-                    "./images/portfolio/16.png",
-                    "./images/portfolio/17.png",
-                    "./images/portfolio/18.png",
-                    "./images/portfolio/19.png",
-                    "./images/portfolio/20.png",
-                    "./images/portfolio/21.png",
-                    "./images/portfolio/22.png",
-                    "./images/portfolio/23.png",
-                    "./images/portfolio/24.png",
-                    "./images/portfolio/25.png",
-                    "./images/portfolio/26.png",
-                    "./images/portfolio/27.png",
-                    "./images/portfolio/28.png",
-                    "./images/portfolio/29.png",
-                    "./images/portfolio/30.png",
-                    "./images/portfolio/31.png",
-                    "./images/portfolio/32.png",
-                ],
+                problem: "TODO: 어떤 사용자의 어떤 문제에서 출발했는지 2~3문장으로. (예: 다이어트 앱 이탈률이 높은 이유를 사용자 인터뷰로 확인한 결과 …)",
+                contribution: "TODO: 팀 규모와 본인이 맡은 범위. (예: 3인 팀 / 기획·IA·UI 디자인 전담, 기여도 100%)",
+                result: "TODO: 결과. 수치가 있으면 가장 좋고, 없으면 무엇을 검증했는지. (예: 프로토타입 사용성 테스트 5명, 인증 완료까지 걸린 단계 4→2)",
                 desc: `
-                    <p>소셜 기반의 다이어트 챌린지 앱으로 인증,피드,배지 루프로 동기부여를 할 수 있게 설계했습니다.</p>
+                    <p>혼자 하면 쉽게 포기하게 되는 다이어트를, 함께 인증하며 이어갈 수 있도록 설계한 소셜 챌린지 앱입니다.
+                    인증 → 피드 → 보상으로 이어지는 루프로 동기부여를 유지하는 데 집중했습니다.</p>
                     <ul>
-                    <li>- 팀 챌린지, 개인 챌린지</li>
-                    <li>- 피드 공유와 댓글 & 리액션</li>
-                    <li>- 레벨& 배지 보상 구조</li>
-                    </ul>
-                 `
-                },
-                planpill: {
-                title: "Plan Pill – 복약/영양제 일정 관리 앱",
+                        <li>· 팀 챌린지 / 개인 챌린지 두 가지 참여 방식</li>
+                        <li>· 인증 피드 공유와 댓글 &amp; 리액션</li>
+                        <li>· 레벨 &amp; 배지 기반 보상 구조</li>
+                    </ul>`,
+                images: range(4, 32, ''),
+                captions: {
+                    1: "TODO: 첫 장에 대한 한 줄 설명",
+                    2: "TODO: 이 화면에서 내린 결정과 그 이유"
+                }
+            },
+            planpill: {
+                title: "Plan Pill – 복약 · 영양제 일정 관리 앱",
                 subtitle: "알약 복용 습관을 관리하는 앱",
                 period: "2025.06 – 2025.09",
                 role: "UX/UI · App",
                 tools: ["Figma", "Illustrator"],
-                images: [
-                    "./images/portfolio/planpill_1.png",
-                    "./images/portfolio/planpill_2.png",
-                    "./images/portfolio/planpill_3.png",
-                    "./images/portfolio/planpill_4.png",
-                    "./images/portfolio/planpill_5.png",
-                    "./images/portfolio/planpill_6.png",
-                    "./images/portfolio/planpill_7.png",
-                    "./images/portfolio/planpill_8.png",
-                    "./images/portfolio/planpill_9.png",
-                    "./images/portfolio/planpill_10.png",
-               ],
-                desc: `<p>복약 일정 등록, 알림, 달력, 진행률 UI에 집중한 팀프로젝트입니다.</p>`
-                },
-                poly1: {
-                title: "Poly 어학원 랜딩페이지",
+                problem: "TODO: 복약을 놓치는 상황과 그 원인",
+                contribution: "TODO: 팀 규모와 본인 담당 범위",
+                result: "TODO: 결과 또는 검증한 것",
+                desc: `<p>복약 일정 등록, 알림, 달력, 진행률 UI에 집중한 팀 프로젝트입니다.
+                       복용 시간을 놓치지 않도록 홈 화면에서 오늘의 복용 상태를 한눈에 확인할 수 있게 구성했습니다.</p>`,
+                images: range(1, 10, 'planpill_'),
+                captions: {}
+            },
+            poly1: {
+                title: "폴리어학원 랜딩페이지",
                 subtitle: "새로운 GRAD 프로그램의 프로모션 랜딩페이지",
-                period: "2024.04 – 2024.04",
+                period: "2024.04",
                 role: "Contents · Promotion",
                 tools: ["Photoshop", "Illustrator"],
-                images: [
-                    "./images/portfolio/poly1_1.png",
-               ],
-                desc: `<p></p>`
-                },
-                poly2: {
-                title: "Poly 어학원 상세페이지",
+                problem: "TODO: 이 페이지가 필요했던 배경 (신규 프로그램 인지도, 상담 신청 저조 등)",
+                contribution: "TODO: 담당 범위 (기획 참여 여부, 디자인 단독 여부)",
+                result: "TODO: 성과가 있으면 수치로",
+                desc: `<p>신규 GRAD 프로그램을 알리기 위한 프로모션 랜딩페이지입니다.
+                       프로그램의 핵심 혜택을 상단에 배치하고, 스크롤 흐름에 따라 상담 신청까지 이어지도록 구성했습니다.</p>`,
+                images: ["./images/portfolio/poly1_1.webp"],
+                captions: {}
+            },
+            poly2: {
+                title: "폴리어학원 상세페이지",
                 subtitle: "AI Writing 프로그램 상세페이지",
-                period: "2024.02 – 2024.02",
+                period: "2024.02",
                 role: "Contents · Detailpage",
                 tools: ["Photoshop", "Illustrator"],
-                images: [
-                    "./images/portfolio/poly1_2.png",
-               ],
-                desc: `<p></p>`
-                },
-                canb: {
-                title: "CANB 어학원 SNS 콘텐츠 디자인",
-                subtitle: "SNS 콘텐츠 작업물",
+                problem: "", contribution: "", result: "",
+                desc: `<p>AI Writing 프로그램의 학습 과정과 특징을 단계별로 정리한 상세페이지입니다.</p>`,
+                images: ["./images/portfolio/poly1_2.webp"],
+                captions: {}
+            },
+            canb: {
+                title: "캔비어학원 SNS 콘텐츠 디자인",
+                subtitle: "SNS 채널 운영을 위한 콘텐츠 작업물",
                 period: "2023.03 – 2024.05",
                 role: "Contents · SNS",
                 tools: ["Photoshop", "Illustrator"],
-                images: [
-                    "./images/portfolio/canb1.png",
-               ],
-                desc: `<p></p>`
-                },
-                beauty1: {
+                problem: "", contribution: "", result: "",
+                desc: `<p>어학원 SNS 채널에 정기적으로 발행한 콘텐츠 디자인입니다.
+                       채널의 톤앤매너를 유지하면서 소식·이벤트·학습 팁 등 주제별 포맷을 정리했습니다.</p>`,
+                images: ["./images/portfolio/canb1.webp"],
+                captions: {}
+            },
+            beauty1: {
                 title: "뷰티피플 메이크업세트 상세페이지",
                 subtitle: "코스메틱 상세페이지",
-                period: "2021.09 – 2021.09",
+                period: "2021.09",
                 role: "Contents · Detailpage",
                 tools: ["Photoshop", "Illustrator"],
-                images: [
-                    "./images/portfolio/beauty1.jpg",
-               ],
-                desc: `<p></p>`
-                },
-                beauty2: {
+                problem: "", contribution: "", result: "",
+                desc: `<p>메이크업 세트의 구성품과 사용법을 순서대로 보여주는 상세페이지입니다.</p>`,
+                images: ["./images/portfolio/beauty1.webp"],
+                captions: {}
+            },
+            beauty2: {
                 title: "뷰티피플 쿠션파운데이션 상세페이지",
                 subtitle: "코스메틱 상세페이지",
-                period: "2021.12 – 2021.12",
+                period: "2021.12",
                 role: "Contents · Detailpage",
                 tools: ["Photoshop", "Illustrator"],
-                images: [
-                    "./images/portfolio/beauty2.png",
-               ],
-                desc: `<p></p>`
-                },
-                casamaru: {
+                problem: "", contribution: "", result: "",
+                desc: `<p>제품의 발색과 지속력을 중심으로 구성한 쿠션파운데이션 상세페이지입니다.</p>`,
+                images: ["./images/portfolio/beauty2.webp"],
+                captions: {}
+            },
+            casamaru: {
                 title: "까사마루 프로모션 디자인",
                 subtitle: "온라인 기획전 디자인",
                 period: "2018.05 – 2020.10",
                 role: "Contents · Promotion",
                 tools: ["Photoshop", "Illustrator"],
-                images: [
-                    "./images/portfolio/casamaru.png",
-               ],
-                desc: `<p></p>`
-                },
-            };
+                problem: "", contribution: "", result: "",
+                desc: `<p>시즌별 온라인 기획전 배너와 기획전 페이지를 디자인했습니다.</p>`,
+                images: ["./images/portfolio/casamaru.webp"],
+                captions: {}
+            }
+        };
 
-            // 모달 열기(카드 id로)
-            function openModalWith(id) {
-                const p = PROJECTS[id];
-                if (!p) return;
+        /* 같은 탭 안의 프로젝트 순서 (이전/다음 이동용) */
+        function siblingIds(id) {
+            const card = document.querySelector('[data-id="' + id + '"]');
+            const sec = card && card.closest('section');
+            return sec ? [...sec.querySelectorAll('[data-id]')].map(a => a.dataset.id)
+                       : Object.keys(PROJECTS);
+        }
 
-                // 1) 이미지 중복 제거 후 첫 장은 대표, 나머지는 썸네일
-                const unique = [...new Set(p.images || [])];
-                const [hero, ...rest] = unique;
+        function esc(str) {
+            return String(str).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+        }
 
-                // 2) 썸네일 마크업(첫 장 제외)
-                const thumbs = rest.map((src, i) => `
-                <button type="button" class="thumb" data-src="${src}" aria-label="이미지 ${i + 2} 보기">
-                    <img src="${src}" alt="${p.title} 썸네일 ${i + 2}">
-                </button>
-                `).join("");
+        function render(id) {
+            const p = PROJECTS[id];
+            if (!p) return false;
 
-                // 3) 모달 내용 주입
-                modalBody.innerHTML = `
+            currentId = id;
+            currentImages = [...new Set(p.images || [])];
+
+            const sibs = siblingIds(id);
+            const i = sibs.indexOf(id);
+            const prev = i > 0 ? sibs[i - 1] : null;
+            const next = i > -1 && i < sibs.length - 1 ? sibs[i + 1] : null;
+
+            const facts = [
+                ['문제', p.problem],
+                ['역할 · 기여', p.contribution],
+                ['결과', p.result]
+            ].filter(([, v]) => v);
+
+            const gallery = currentImages.map((src, n) => {
+                const cap = (p.captions || {})[n + 1];
+                return `
+                <figure class="shot">
+                    <button type="button" class="shot__btn" data-index="${n}"
+                            aria-label="이미지 ${n + 1} 크게 보기">
+                        <img src="${src}" alt="${esc(p.title)} 상세 이미지 ${n + 1}"
+                             loading="${n < 2 ? 'eager' : 'lazy'}" decoding="async">
+                    </button>
+                    ${cap ? `<figcaption>${esc(cap)}</figcaption>` : ''}
+                </figure>`;
+            }).join('');
+
+            modalBody.innerHTML = `
                 <header class="project-head">
-                    <div class="project-meta">
-                    <h3 class="project-title">${p.title || ""}</h3>
-                    ${p.subtitle ? `<p class="project-sub">${p.subtitle}</p>` : ""}
+                    <h3 class="project-title">${esc(p.title)}</h3>
+                    ${p.subtitle ? `<p class="project-sub">${esc(p.subtitle)}</p>` : ''}
                     <ul class="project-info">
-                        <li><strong>Period</strong> ${p.period || "-"}</li>
-                        <li><strong>Role</strong> ${p.role || "-"}</li>
-                        <li><strong>Tools</strong> ${(p.tools || []).join(" · ") || "-"}</li>
+                        <li><strong>Period</strong> ${esc(p.period || '-')}</li>
+                        <li><strong>Role</strong> ${esc(p.role || '-')}</li>
+                        <li><strong>Tools</strong> ${esc((p.tools || []).join(' · ') || '-')}</li>
                     </ul>
+                    <div class="project-nav">
+                        <button type="button" class="project-nav__btn" data-go="${prev || ''}"
+                                ${prev ? '' : 'disabled'}>← 이전</button>
+                        <span class="project-nav__count">${i + 1} / ${sibs.length}</span>
+                        <button type="button" class="project-nav__btn" data-go="${next || ''}"
+                                ${next ? '' : 'disabled'}>다음 →</button>
                     </div>
                 </header>
 
-                ${hero ? `
-                <figure class="hero">
-                    <img class="hero-img" src="${hero}" alt="${p.title} 대표 이미지">
-                </figure>` : ""}
+                ${facts.length ? `
+                <section class="case-study">
+                    ${facts.map(([k, v]) => `
+                    <div class="case-study__item">
+                        <h4>${k}</h4>
+                        <p>${esc(v)}</p>
+                    </div>`).join('')}
+                </section>` : ''}
 
-                ${rest.length ? `<div class="thumbs">${thumbs}</div>` : ""}
+                <section class="project-desc">${p.desc || ''}</section>
+                ${currentImages.length ? `<div class="project-gallery">${gallery}</div>` : ''}
+            `;
+            document.getElementById('modal-title').textContent = p.title + ' 프로젝트 상세';
+            modal.scrollTop = 0;
+            return true;
+        }
 
-                <section class="project-desc">
-                    ${p.desc || ""}
-                </section>
-                `;
+        function openModalWith(id, { push = true } = {}) {
+            if (!render(id)) return;
+            if (push) history.pushState(null, '', '#project=' + id);
 
-                // 4) 썸네일 클릭 → 대표 이미지 교체
-                const heroImg = modalBody.querySelector('.hero-img');
-                const thumbsWrap = modalBody.querySelector('.thumbs');
-                thumbsWrap?.addEventListener('click', (e) => {
-                const btn = e.target.closest('.thumb');
-                if (!btn || !heroImg) return;
-                heroImg.src = btn.dataset.src;
-                });
-
-                // 5) 모달 표시
+            lastFocused = lastFocused || document.activeElement;
+            dimm.hidden = false;
+            modalContainer.hidden = false;
+            requestAnimationFrame(() => {
                 dimm.classList.add('is-open');
                 modalContainer.classList.add('is-open');
+            });
+            document.body.style.overflow = 'hidden';
+            modal.focus();
+            document.addEventListener('keydown', onKeydown);
+        }
 
-                // ESC로 닫기
-                document.addEventListener('keydown', onEscClose);
+        function closeModal() {
+            closeLightbox();
+            dimm.classList.remove('is-open');
+            modalContainer.classList.remove('is-open');
+            document.body.style.overflow = '';
+            document.removeEventListener('keydown', onKeydown);
+            setTimeout(() => {
+                dimm.hidden = true;
+                modalContainer.hidden = true;
+                modalBody.innerHTML = '';
+            }, 300);
+            if (location.hash.startsWith('#project=')) {
+                const sec = document.querySelector('[data-id="' + currentId + '"]');
+                const tab = sec && sec.closest('section') ? sec.closest('section').id : 'about';
+                history.replaceState(null, '', '#' + tab);
             }
+            currentId = null;
+            if (lastFocused) { lastFocused.focus(); lastFocused = null; }
+        }
 
-            function onEscClose(e){
-                if(e.key === 'Escape'){
-                e.preventDefault();
-                closeModal();
-                }
+        /* ---- 라이트박스 ---- */
+        function openLightbox(n) {
+            if (!currentImages.length) return;
+            lbIndex = (n + currentImages.length) % currentImages.length;
+            lbImg.src = currentImages[lbIndex];
+            const cap = (PROJECTS[currentId].captions || {})[lbIndex + 1];
+            lbCap.textContent = cap ? cap : (lbIndex + 1) + ' / ' + currentImages.length;
+            lightbox.hidden = false;
+            requestAnimationFrame(() => lightbox.classList.add('is-open'));
+            lightbox.querySelector('.lightbox__close').focus();
+        }
+        function closeLightbox() {
+            if (lightbox.hidden) return;
+            lightbox.classList.remove('is-open');
+            setTimeout(() => { lightbox.hidden = true; lbImg.removeAttribute('src'); }, 250);
+            lbIndex = -1;
+        }
+
+        function onKeydown(e) {
+            if (!lightbox.hidden) {
+                if (e.key === 'Escape') { e.preventDefault(); closeLightbox(); return; }
+                if (e.key === 'ArrowLeft') { e.preventDefault(); openLightbox(lbIndex - 1); return; }
+                if (e.key === 'ArrowRight') { e.preventDefault(); openLightbox(lbIndex + 1); return; }
+                return;
             }
-
-            function closeModal() {
-                dimm.classList.remove('is-open');
-                modalContainer.classList.remove('is-open');
-                document.removeEventListener('keydown', onEscClose);
+            if (e.key === 'Escape') { e.preventDefault(); closeModal(); return; }
+            if (e.key === 'Tab') {
+                const f = modalContainer.querySelectorAll(
+                    'button:not([disabled]), a[href], input, textarea, [tabindex]:not([tabindex="-1"])');
+                if (!f.length) return;
+                const first = f[0], last = f[f.length - 1];
+                if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+                else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
             }
+        }
 
-            // 카드 클릭 → 모달 오픈 (a[data-id] 필요) - 전체 탭 컨테이너 위임
-            if (contentsContainer) {
-                contentsContainer.addEventListener('click', (e) => {
-                const link = e.target.closest('a[data-id]');
-                if (!link) return;
-                e.preventDefault();
-                openModalWith(link.dataset.id);
-                });
+        /* ---- 이벤트 ---- */
+        contents.addEventListener('click', (e) => {
+            const card = e.target.closest('[data-id]');
+            if (!card) return;
+            e.preventDefault();
+            openModalWith(card.dataset.id);
+        });
+
+        modalBody.addEventListener('click', (e) => {
+            const go = e.target.closest('.project-nav__btn[data-go]');
+            if (go && go.dataset.go) {
+                render(go.dataset.go);
+                history.replaceState(null, '', '#project=' + go.dataset.go);
+                return;
             }
+            const shot = e.target.closest('.shot__btn');
+            if (shot) openLightbox(Number(shot.dataset.index));
+        });
 
-            // 닫기 버튼 & 딤 클릭
-            closeBtn?.addEventListener('click', closeModal);
-            dimm?.addEventListener('click', closeModal);
-        </script>
+        lightbox.addEventListener('click', (e) => {
+            if (e.target.closest('.lightbox__prev')) return openLightbox(lbIndex - 1);
+            if (e.target.closest('.lightbox__next')) return openLightbox(lbIndex + 1);
+            if (e.target.closest('.lightbox__img')) return;
+            closeLightbox();
+        });
 
-        <script>
-            const hero = document.querySelector('.bg');
-            const obs = new IntersectionObserver(([e]) => {
-                document.body.classList.toggle('is-scrolled', !e.isIntersecting);
-            }, { threshold: 0.01 });
-            if (hero) obs.observe(hero);
-        </script>
+        closeBtn.addEventListener('click', closeModal);
+        dimm.addEventListener('click', closeModal);
+
+        /* ---- URL 로 특정 프로젝트 열기 (#project=dachal) ---- */
+        function openFromHash() {
+            const m = location.hash.match(/^#project=(.+)$/);
+            if (!m) return;
+            const id = decodeURIComponent(m[1]);
+            const card = document.querySelector('[data-id="' + id + '"]');
+            if (!card || !PROJECTS[id]) return;
+            const sec = card.closest('section');
+            if (sec) {
+                const tab = document.querySelector('.menus a[href="#' + sec.id + '"]');
+                if (tab) tab.click();
+            }
+            setTimeout(() => openModalWith(id, { push: false }), 60);
+        }
+        window.addEventListener('hashchange', () => {
+            if (location.hash.startsWith('#project=') && modalContainer.hidden) openFromHash();
+        });
+        openFromHash();
+    })();
+
+    /* ---------- 스크롤 상태 ---------- */
+    (function () {
+        const hero = document.querySelector('.hero');
+        if (!hero) return;
+        new IntersectionObserver(([e]) => {
+            document.body.classList.toggle('is-scrolled', !e.isIntersecting);
+        }, { threshold: 0.01 }).observe(hero);
+    })();
+    </script>
 </body>
 </html>
