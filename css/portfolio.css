@@ -312,7 +312,7 @@ body.is-scrolled .site-header {
     font-size: clamp(3.4rem, 7vw, 5.4rem);
     line-height: .82;
     color: var(--script);
-    margin-left: .12em;
+    margin-left: .10em;
     margin-top: .12em;
 }
 
