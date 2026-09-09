@@ -352,7 +352,7 @@ body.is-scrolled .site-header {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background: url(../images/portfolio/profile2.webp) no-repeat bottom center/cover;
+    background: url(../images/portfolio/profile2.webp) no-repeat bottom top/cover;
     box-shadow: var(--shadow-lg);
     border: 6px solid rgba(255, 255, 255, .65);
 }
