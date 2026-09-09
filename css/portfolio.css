@@ -876,15 +876,28 @@ body.is-scrolled .site-header {
 }
 
 /* ---------- 11. 모달 ---------- */
+.dimm[hidden],
+.modal-container[hidden] {
+    display: none !important;
+    pointer-events: none !important;
+}
+
 .dimm {
     position: fixed;
     inset: 0;
     background: rgb(var(--ink-rgb) / .72);
     backdrop-filter: blur(3px);
     z-index: 99;
+    display: none;
+    pointer-events: none;
     opacity: 0;
     visibility: hidden;
     transition: opacity .3s var(--ease), visibility .3s var(--ease);
+}
+
+.dimm:not([hidden]) {
+    display: block;
+    pointer-events: auto;
 }
 
 .modal-container {
@@ -898,10 +911,17 @@ body.is-scrolled .site-header {
     border-radius: var(--radius-lg);
     overflow: hidden;
     z-index: 100;
+    display: none;
+    pointer-events: none;
     opacity: 0;
     visibility: hidden;
     box-shadow: var(--shadow-lg);
     transition: opacity .3s var(--ease), transform .3s var(--ease), visibility .3s var(--ease);
+}
+
+.modal-container:not([hidden]) {
+    display: block;
+    pointer-events: auto;
 }
 
 .dimm.is-open { opacity: 1; visibility: visible; }
@@ -1116,7 +1136,8 @@ body.is-scrolled .site-header {
     position: fixed;
     inset: 0;
     z-index: 200;
-    display: grid;
+    display: none;
+    pointer-events: none;
     grid-template-columns: auto 1fr auto;
     align-items: center;
     gap: clamp(8px, 2vw, 24px);
@@ -1124,6 +1145,11 @@ body.is-scrolled .site-header {
     background: rgb(var(--ink-rgb) / .92);
     opacity: 0;
     transition: opacity .25s var(--ease);
+}
+
+.lightbox:not([hidden]) {
+    display: grid;
+    pointer-events: auto;
 }
 
 .lightbox.is-open { opacity: 1; }
