@@ -1073,7 +1073,7 @@ body.is-scrolled .site-header {
 
 /* 케이스 스터디 3칸 */
 .case-study {
-    display: grid;
+    display: none;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1px;
     margin: 1.75rem clamp(1.25rem, 4vw, 2.5rem) 0;
